@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     private EditText minute_text;
     private EditText seconde_text;
@@ -30,10 +30,18 @@ public class MainActivity extends AppCompatActivity{
 
         button_start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                 String var = minute_text.getText().toString();
-                 int progress = Integer.parseInt(var);
-                 arret.setText(String.valueOf(progress));
-        }
+                try {
+                    String var = minute_text.getText().toString();
+                    int progress = Integer.parseInt(var);
+                    while(progress != 0) {
+                        minuteur.setText(String.valueOf(progress));
+                        Thread.sleep(1000);
+                        progress --;
+                    };
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         });
     }
 
