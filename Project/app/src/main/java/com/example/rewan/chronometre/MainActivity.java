@@ -12,13 +12,14 @@ public class MainActivity extends AppCompatActivity{
     private EditText minute_text;
     private EditText seconde_text;
     private Button button_start;
-    private TextView arret;
+    private TextView arret,minuteur;
 
     private void bindViews() {
         button_start = findViewById(R.id.button_start);
         minute_text = findViewById(R.id.minute);
         seconde_text = findViewById(R.id.seconde);
         arret = findViewById(R.id.arret);
+        minuteur = findViewById(R.id.minuteur);
     }
 
     @Override

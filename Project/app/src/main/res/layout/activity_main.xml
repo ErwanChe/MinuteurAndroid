@@ -10,22 +10,20 @@
         android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginStart="14dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/arret"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seconde" />
+        app:layout_constraintStart_toEndOf="@+id/minute" />
 
     <TextView
         android:id="@+id/arret"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="97dp"
-        android:layout_marginStart="14dp"
+        android:layout_marginBottom="43dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button_start"
-        app:layout_constraintTop_toBottomOf="@+id/button_start" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/minute"
@@ -36,7 +34,7 @@
         android:layout_marginStart="62dp"
         android:layout_marginTop="234dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/button_start"
         app:layout_constraintEnd_toStartOf="@+id/seconde"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,9 +48,19 @@
         android:layout_marginEnd="66dp"
         android:layout_marginTop="231dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/button_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/minute"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/minuteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/arret"
+        app:layout_constraintStart_toStartOf="@+id/arret"
+        app:layout_constraintTop_toBottomOf="@+id/button_start" />
 </android.support.constraint.ConstraintLayout>
