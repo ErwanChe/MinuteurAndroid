@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity{
 
         button_start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                arret.setText("lol");
+                 String var = minute_text.getText().toString();
+                 int progress = Integer.parseInt(var);
+                 arret.setText(String.valueOf(progress));
         }
         });
     }
