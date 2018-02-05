@@ -7,12 +7,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText minute_text;
     private EditText seconde_text;
     private Button button_start;
     private TextView arret,minuteur;
+    private Minuteur minuteur_class = null;
 
     private void bindViews() {
         button_start = findViewById(R.id.button_start);
@@ -27,8 +28,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bindViews();
+        button_start.setOnClickListener(this);
 
-        button_start.setOnClickListener(new View.OnClickListener() {
+        /*button_start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
                     String var = minute_text.getText().toString();
@@ -42,7 +44,13 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        });
+        });*/
+    }
+
+    @Override
+    public void onClick(View v) {
+        minuteur_class = new Minuteur(this);
+        minuteur_class.execute();
     }
 
 }
