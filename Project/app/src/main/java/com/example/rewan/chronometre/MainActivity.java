@@ -49,8 +49,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        minuteur_class = new Minuteur(this);
-        minuteur_class.execute();
+        if (minuteur_class != null){
+            minuteur_class.cancel(true);
+            minuteur_class = null;
+            button_start.setText("Start");
+        } else {
+            minuteur_class = new Minuteur(this);
+            minuteur_class.execute();
+            button_start.setText("Cancel");
+        }
     }
 
 }
