@@ -4,63 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rewan.chronometre.MainActivity">
+    tools:context="com.example.rewan.chronometre.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
-        android:layout_marginStart="14dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/arret"
-        app:layout_constraintStart_toEndOf="@+id/minute" />
-
-    <TextView
-        android:id="@+id/arret"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="43dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="96dp"
+        android:layout_marginTop="88dp"
+        android:text="Start"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/minute"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="51dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="234dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/button_start"
-        app:layout_constraintEnd_toStartOf="@+id/seconde"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/seconde"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="66dp"
-        android:layout_marginTop="231dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/button_start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/minute"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/minuteur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="60dp"
         android:text="0"
-        app:layout_constraintEnd_toStartOf="@+id/arret"
-        app:layout_constraintStart_toStartOf="@+id/arret"
+        app:layout_constraintStart_toStartOf="@+id/button_start"
         app:layout_constraintTop_toBottomOf="@+id/button_start" />
+
+    <NumberPicker
+        android:id="@+id/secondePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <NumberPicker
+        android:id="@+id/minutePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/secondePicker" />
 </android.support.constraint.ConstraintLayout>
